@@ -4,24 +4,8 @@
 ## Prerequisites
 node version 11
 
-## Install
-```
-
-```
-
-## Usage
-```
-
-```
-
-## Run tests
-```
-
-```
-
 ## Author
 - **jillazquez**
-  - Twitter: [@no](https://twitter.com/no)
   - GitHub: [jillazquez](https://github.com/jillazquez)
 
 ## Contributing
