@@ -15,6 +15,7 @@ import Project from '@components/Project.astro'
 	</head>
 	<body>
 		<Header/>
+		<hr>
 		<div class="introduction">
 			<h1 class="presentation">Hola soy Juan Manuel Illazquez</h1>
 			<p class="description">info sobre mi bla bla bla</p>
@@ -25,26 +26,87 @@ import Project from '@components/Project.astro'
 			</div>
 		</div>
 		<div class="work">
-			<h1 class="work-header">This is some of my work</h1>
-			<p class="descption">desc bla bla bla</p>
-			<button>See all</button>
+			<div class="presentation">
+				<div class="text">
+					<h1 class="work-header">This is some of my work</h1>
+					<p class="description">Take a look to my lastest projects</p>
+				</div>
+				<button>				<img src="assets/cohete.svg" alt="Icono">
+					<span>See all</span></button>
+			</div>
 			<div class="work">
 				<Project title="Titulo ejemplio" description="descripcion ejemplo" imageUrl="assets/stock-1.jpg" projectUrl="https://google.com"/>
 				<Project title="Titulo ejemplio2" description="descripcion ejemplo" imageUrl="assets/stock-2.jpg" projectUrl="https://google.com"/>
+				<Project title="Titulo ejemplio" description="descripcion ejemplo" imageUrl="assets/stock-1.jpg" projectUrl="https://google.com"/>
 			</div>
 		</div>
 		<div class="work-together">
 			<h1 class="title">Work together?</h1>
-			<button>
+			<button onclick="window.location.href='mailto:tuemail@ejemplo.com';">
 				<img src="assets/cohete.svg" alt="Icono">
-				<span>Launch</span>
-			  </button>
+				<span>Send me a message</span>
+			</button>
 		</div>
 		<Footer/>
 	</body>
 </html>
 
 <style>
+	.work-together{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 20px;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	.work .presentation button {
+		width: 150px;
+		height: 50px;
+		margin-top: 50px;
+	}
+	.work .presentation{
+		display: flex;
+		justify-content: space-between;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+	.work .work-header{
+		margin-top: 20px;
+		margin-left: 10%;
+	}
+	.work .description{
+		margin-left: 10%;
+	}
+	hr{
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+.introduction {
+	margin-top: 50px;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center; /* Esto asegura que todo el contenido esté centrado horizontalmente */
+}
+
+.etiquetas {
+	display: flex;
+	justify-content: center; /* Centra las etiquetas horizontalmente */
+	gap: 10px; /* Espaciado entre las etiquetas */
+	margin-top: 10px; /* Añade margen superior para separar las etiquetas del título */
+}
+
+.etiqueta {
+	background: linear-gradient(to right, #ad5389, #0f0c29);
+	border-radius: 50px;
+	padding: 5px 10px;
+	text-align: center;
+	width: auto; /* Ajusta el ancho al contenido */
+	color: white;
+	font-size: 14px;
+}
 * {
 		color: white;
 		margin: 0; /* Elimina el margen predeterminado */
