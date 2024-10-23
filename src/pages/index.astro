@@ -15,21 +15,37 @@ import Project from '@components/Project.astro'
 	</head>
 	<body>
 		<Header/>
-		<hr>
-		<div class="img-container">
-			<img class="img" src="assets/purple-background.webp" alt="">
-			<p>Proyectos</p>
+		<div class="introduction">
+			<h1 class="presentation">Hola soy Juan Manuel Illazquez</h1>
+			<p class="description">info sobre mi bla bla bla</p>
+			<div class="etiquetas">
+				<div class="etiqueta">C#</div>
+				<div class="etiqueta">Java</div>
+				<div class="etiqueta">Javascript</div>
+			</div>
 		</div>
-		<Project title="Titulo ejemplio" description="descripcion ejemplo" imageUrl="assets/stock-1.jpg" projectUrl="https://google.com"/>
-		<Project title="Titulo ejemplio2" description="descripcion ejemplo" imageUrl="assets/stock-2.jpg" projectUrl="https://google.com"/>
-		<Project title="Titulo ejemplio3" description="descripcion ejemplo" imageUrl="assets/stock-3.jpg" projectUrl="https://google.com"/>
+		<div class="work">
+			<h1 class="work-header">This is some of my work</h1>
+			<p class="descption">desc bla bla bla</p>
+			<button>See all</button>
+			<div class="work">
+				<Project title="Titulo ejemplio" description="descripcion ejemplo" imageUrl="assets/stock-1.jpg" projectUrl="https://google.com"/>
+				<Project title="Titulo ejemplio2" description="descripcion ejemplo" imageUrl="assets/stock-2.jpg" projectUrl="https://google.com"/>
+			</div>
+		</div>
+		<div class="work-together">
+			<h1 class="title">Work together?</h1>
+			<button>
+				<img src="assets/cohete.svg" alt="Icono">
+				<span>Launch</span>
+			  </button>
+		</div>
 		<Footer/>
 	</body>
 </html>
 
 <style>
 * {
-		background-color: #141018;
 		color: white;
 		margin: 0; /* Elimina el margen predeterminado */
 		padding: 0; /* Elimina el relleno predeterminado */
@@ -76,4 +92,41 @@ import Project from '@components/Project.astro'
 	.text p{
 		color: #797979;
 	}
+	/* From Uiverse.io by adamgiebl */ 
+button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.3em 0.8em 0.9em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  border: none;
+  letter-spacing: 0.05em;
+  border-radius: 16px;
+}
+
+button img {
+  margin-right: 3px;
+  transform: rotate(30deg);
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  filter: invert(100%);
+}
+
+button span {
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+button:hover img {
+  transform: translateX(5px) rotate(90deg);
+}
+
+button:hover span {
+  transform: translateX(7px);
+}
+
+	
 </style>
