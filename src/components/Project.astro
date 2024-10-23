@@ -1,0 +1,30 @@
+---
+const {title,description,imageUrl,projectUrl } = Astro.props;
+---
+<div class="project">
+    <div class="text">			
+	    <h4>{title}</h4>
+	    <p>{description}</p>
+	</div>
+	<a href={projectUrl}><img src={imageUrl} alt=""></a>
+</div>
+<style>
+    .project{
+		margin-top: 20px;
+		margin-left: 200px;
+		margin-right: 200px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.project img{
+		max-width: 300px;
+		border-radius: 20px;
+	}
+	.text h4{
+		color: white;
+		margin-top: 50px;
+	}
+	.text p{
+		color: #797979;
+	}
+</style>

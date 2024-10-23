@@ -1,0 +1,79 @@
+---
+import Footer from '@components/Footer.astro'
+import Header from '@components/Header.astro'
+import Project from '@components/Project.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+		<link rel="stylesheet" href="../../src/styles/global.css">
+	</head>
+	<body>
+		<Header/>
+		<hr>
+		<div class="img-container">
+			<img class="img" src="assets/purple-background.webp" alt="">
+			<p>Proyectos</p>
+		</div>
+		<Project title="Titulo ejemplio" description="descripcion ejemplo" imageUrl="assets/stock-1.jpg" projectUrl="https://google.com"/>
+		<Project title="Titulo ejemplio2" description="descripcion ejemplo" imageUrl="assets/stock-2.jpg" projectUrl="https://google.com"/>
+		<Project title="Titulo ejemplio3" description="descripcion ejemplo" imageUrl="assets/stock-3.jpg" projectUrl="https://google.com"/>
+		<Footer/>
+	</body>
+</html>
+
+<style>
+* {
+		background-color: #141018;
+		color: white;
+		margin: 0; /* Elimina el margen predeterminado */
+		padding: 0; /* Elimina el relleno predeterminado */
+	}
+
+	.img-container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center; /* Centra verticalmente */
+		padding-top: 40px;
+	}
+
+	.img {
+		max-width: 100%; /* Mantiene la imagen responsiva */
+		height: auto; /* Mantiene la relación de aspecto */
+		border-radius: 20px;
+	}
+
+	.img-container p {
+		font-size: 3rem;
+		color: white;
+		position: absolute;
+		top: 50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		background: transparent;
+	}
+	.project{
+		margin-top: 20px;
+		margin-left: 200px;
+		margin-right: 200px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.project img{
+		max-width: 300px;
+		border-radius: 20px;
+	}
+	.text h4{
+		color: white;
+		margin-top: 50px;
+	}
+	.text p{
+		color: #797979;
+	}
+</style>
