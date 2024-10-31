@@ -1,0 +1,97 @@
+---
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import Header from '@components/Header.astro';
+
+// Ruta absoluta a la carpeta de proyectos
+const projectsDir = path.resolve('src', 'projects');
+
+// Función `getStaticPaths` para generar rutas dinámicas
+export async function getStaticPaths() {
+  const projectFiles = fs.readdirSync(path.resolve('src/projects'));
+
+  return projectFiles.map((file) => {
+    const slug = file.replace('.md', '');
+    return { params: { slug } };
+  });
+}
+
+const { slug } = Astro.params;
+const filePath = path.join(projectsDir, `${slug}.md`);
+const fileContent = fs.readFileSync(filePath, 'utf-8');
+const { data, content } = matter(fileContent);
+const { title, description, imageUrl } = data;
+---
+
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>{title}</title>
+	<link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+	<Header/>
+			<hr>
+	<div class="project-container">
+		<h1>{title}</h1>
+		<img class="project-image" src={imageUrl} alt={title}>
+		<p class="project-description">{description}</p>
+		<article class="project-content">
+			{content}
+		</article>
+	</div>
+</body>
+</html>
+
+<style>
+body {
+	font-family: Arial, sans-serif;
+	color: #e0e0e0;
+	padding: 20px;
+}
+
+.project-container {
+	max-width: 800px;
+	margin: 40px auto;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.5rem;
+	color: #ffcc00;
+	margin-bottom: 15px;
+}
+
+.project-image {
+	width: 100%;
+	max-width: 700px;
+	height: auto;
+	border-radius: 15px;
+	margin: 20px auto;
+	box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.project-description {
+	color: #b3b3b3;
+	font-size: 1.2rem;
+	margin-top: 10px;
+	font-style: italic;
+}
+
+.project-content {
+	margin-top: 30px;
+	line-height: 1.6;
+	font-size: 1.1rem;
+	text-align: left;
+}
+
+.project-content p {
+	margin-bottom: 15px;
+}
+
+.project-content h2, .project-content h3 {
+	color: #ffcc00;
+	margin-top: 25px;
+}
+</style>
