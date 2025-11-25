@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+     font-family: "JetBrains Mono", monospace;
+}
+
+.page-flow {
+     display: flex;
+     flex-direction: column;
+     gap: 2rem;
+}
+
+.reveal {
+     opacity: 0;
+     transform: translateY(32px);
+     animation: fadeInUp 0.8s ease forwards;
+     animation-delay: calc(var(--order, 0) * 0.15s);
+}
+
+.fade-in-up {
+     opacity: 0;
+     transform: translateY(32px);
+     animation: fadeInUp 0.8s ease forwards;
+}
+
+.delay-800 {
+     animation-delay: 0.8s;
+}
+
+@keyframes fadeInUp {
+     from {
+          opacity: 0;
+          transform: translateY(32px);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+     .reveal,
+     .fade-in-up {
+          animation: none;
+          opacity: 1;
+          transform: none;
+     }
+}

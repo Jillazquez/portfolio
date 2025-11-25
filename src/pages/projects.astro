@@ -1,0 +1,86 @@
+---
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<div class="page-flow">
+		<div class="reveal" style="--order: 0">
+			<Header />
+		</div>
+
+		<main class="reveal" style="--order: 1">
+			<section class="w-full mx-auto lg:w-[960px] py-16 px-5 space-y-10">
+				<div class="space-y-4 text-center md:text-left">
+					<p class="text-sm uppercase tracking-[0.35em] text-yellow-400">
+						Projects
+					</p>
+					<h1 class="text-white text-4xl font-bold">
+						Selected recent work
+					</h1>
+					<p class="text-gray-300 leading-relaxed max-w-2xl">
+						Each project blends research, design, and engineering to craft crisp, user-centered experiences.
+						Here's a snapshot of initiatives where I experimented with new technologies and interaction patterns.
+					</p>
+				</div>
+
+				<div class="grid gap-6 md:gap-8">
+					{[
+						{
+							title: 'Callio',
+							description:
+								'I designed a social media app where you can only post with rhymes',
+							stack: ['Node', 'React', 'Bootstrap', 'Mongo'],
+							link: 'https://github.com/Jillazquez/twitterTFG',
+						},
+						{
+							title: 'Portfolio',
+							description:
+								'This portfolio is a project to show ',
+							stack: ['Astro', 'TailWind'],
+							link: 'https://github.com/jillazquez',
+						},
+						{
+							title: 'Hecate',
+							description:
+								'A password locker where you can save and share your passwords with your team',
+							stack: ['Node', 'mySql', 'React', 'Electron', 'Bootstrap'],
+							link: 'https://github.com/Jillazquez/Hecate',
+						},
+					].map((project, idx) => (
+						<article
+							class="bg-zinc-900/80 border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col gap-6 reveal"
+							style={`--order: ${idx + 1}`}
+						>
+							<div class="space-y-3">
+								<p class="text-xs uppercase tracking-[0.3em] text-yellow-400">Featured project</p>
+								<h2 class="text-white text-2xl font-semibold">{project.title}</h2>
+								<p class="text-gray-300 leading-relaxed">{project.description}</p>
+							</div>
+
+							<ul class="flex flex-wrap gap-2 text-xs uppercase tracking-wide text-gray-300">
+								{project.stack.map((tag) => (
+									<li class="px-3 py-1 border border-zinc-700 rounded-full">{tag}</li>
+								))}
+							</ul>
+
+							<div class="flex flex-wrap gap-3">
+								<a
+									href={project.link}
+									target="_blank"
+									rel="noreferrer"
+									class="px-5 py-2 rounded-md bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition"
+								>
+									View project
+								</a>
+							</div>
+						</article>
+					))}
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
+
+
+

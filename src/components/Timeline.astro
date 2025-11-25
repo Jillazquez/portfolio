@@ -1,0 +1,16 @@
+---
+import TimelineObject from "./TimelineObject.astro";
+import {experience} from "../data/expetiencie";
+---
+
+<div class="flex justify-center">
+<ol class="relative border-s border-default">         
+    {experience.map ((e) => (
+        <TimelineObject
+        empresaAño={e.companyPeriod}
+        titulo={e.title}
+        descripcion={e.description}
+        />
+    ))}
+</ol>
+</div>

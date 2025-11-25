@@ -1,0 +1,68 @@
+---
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<div class="page-flow">
+		<div class="reveal" style="--order: 0">
+			<Header />
+		</div>
+
+		<main class="reveal" style="--order: 1">
+			<section class="w-full mx-auto lg:w-[740px] py-16 px-5 space-y-8">
+				<div class="space-y-4">
+					<p class="text-sm uppercase tracking-[0.35em] text-yellow-400">
+						Contact
+					</p>
+					<h1 class="text-white text-4xl font-bold">
+						Let's work on something remarkable together
+					</h1>
+					<p class="text-gray-300 leading-relaxed">
+						If you have a project in mind, a job opportunity, or just want to explore new ideas,
+						I'd love to hear from you. I typically reply quickly via email or LinkedIn.
+					</p>
+				</div>
+
+				<div class="bg-zinc-900/80 border border-zinc-800 rounded-3xl p-6 sm:p-8 space-y-6 fade-in-up delay-800">
+					<div class="flex flex-col gap-2">
+						<p class="text-sm uppercase tracking-[0.25em] text-yellow-400">Email</p>
+						<a href="mailto:jillazquez@gmail.com" class="text-white text-2xl font-semibold hover:text-yellow-300 transition">
+							jillazquez@gmail.com
+						</a>
+					</div>
+
+					<div class="flex flex-col gap-2">
+						<p class="text-sm uppercase tracking-[0.25em] text-yellow-400">LinkedIn</p>
+						<a
+							href="https://www.linkedin.com/in/juan-manuel-illazquez-du%C3%B1an-920a52262/"
+							target="_blank"
+							rel="noreferrer"
+							class="text-white text-xl font-semibold hover:text-yellow-300 transition"
+						>
+							Connect on LinkedIn
+						</a>
+					</div>
+
+					<div class="flex flex-wrap gap-3 pt-2">
+						<a
+							href="mailto:jillazquez@gmail.com"
+							class="px-5 py-3 rounded-md bg-yellow-400 text-black font-semibold hover:bg-yellow-300 transition"
+						>
+							Send an email
+						</a>
+						<a
+							href="../cvJuanManuel.pdf"
+							download
+							aria-label="Download CV"
+							class="px-5 py-3 rounded-md border border-zinc-700 text-white hover:border-yellow-400 transition flex items-center gap-2"
+						>
+							<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v9"></path><path d="m8 10 4 4 4-4"></path><path d="M5 19h14"></path></svg>
+							<span>Download CV</span>
+						</a>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+</Layout>
