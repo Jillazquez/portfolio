@@ -35,8 +35,7 @@ import Layout from '../layouts/Layout.astro';
 						},
 						{
 							title: 'Portfolio',
-							description:
-								'This portfolio is a project to show ',
+							description: 'This portfolio is a project to show ',
 							stack: ['Astro', 'TailWind'],
 							link: 'https://github.com/jillazquez',
 						},
@@ -52,6 +51,8 @@ import Layout from '../layouts/Layout.astro';
 							class="bg-zinc-900/80 border border-zinc-800 rounded-3xl p-6 sm:p-8 flex flex-col gap-6 reveal"
 							style={`--order: ${idx + 1}`}
 						>
+							
+
 							<div class="space-y-3">
 								<p class="text-xs uppercase tracking-[0.3em] text-yellow-400">Featured project</p>
 								<h2 class="text-white text-2xl font-semibold">{project.title}</h2>

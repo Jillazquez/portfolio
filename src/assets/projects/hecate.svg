@@ -1,0 +1,23 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="hecateGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5eead4"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="hecateBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="#04060c"/>
+  <rect x="44" y="44" width="552" height="272" rx="28" fill="url(#hecateBg)"/>
+  <rect x="92" y="92" width="456" height="176" rx="20" fill="#050c1c" stroke="#0d1b2a" stroke-width="2"/>
+  <circle cx="160" cy="184" r="44" fill="none" stroke="url(#hecateGradient)" stroke-width="10"/>
+  <path d="M200 160 L280 160 L280 208 L200 208" fill="none" stroke="#1d4ed8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="304" y="150" width="220" height="68" rx="14" fill="#0f172a" stroke="#172554" stroke-width="2"/>
+  <text x="324" y="192" font-family="JetBrains Mono, monospace" font-size="22" fill="#e0f2fe">TEAM ACCESS</text>
+  <text x="120" y="272" font-family="JetBrains Mono, monospace" font-size="24" fill="#f8fafc">HECATE PASSWORD LOCKER</text>
+</svg>
+
+
+

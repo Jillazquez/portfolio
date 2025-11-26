@@ -1,0 +1,21 @@
+<svg width="640" height="360" viewBox="0 0 640 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="callioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+    <linearGradient id="callioAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="32" fill="#0b0b0f"/>
+  <rect x="40" y="40" width="560" height="280" rx="28" fill="url(#callioAccent)" opacity="0.9"/>
+  <circle cx="520" cy="80" r="20" fill="#fcd34d"/>
+  <circle cx="560" cy="80" r="20" fill="#f97316" opacity="0.8"/>
+  <path d="M120 220 L200 140 L260 200 L320 100 L400 240 L520 140" stroke="url(#callioGradient)" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="280" font-family="JetBrains Mono, monospace" font-size="28" fill="#f8fafc">CALLIO SOCIAL</text>
+</svg>
+
+
+
